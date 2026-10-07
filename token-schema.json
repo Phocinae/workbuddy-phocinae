@@ -1,0 +1,36 @@
+{
+  "title": "斑海豹服务对接配置",
+  "title_en": "Phocinae Service Configuration",
+  "description": "配置本地斑海豹决策服务地址与可选访问令牌。凭证仅保存在本机 ~/.workbuddy 目录下，不经过云端。",
+  "description_en": "Configure the local Phocinae decision service endpoint and optional access token. Credentials are stored only in your local ~/.workbuddy directory and never pass through the cloud.",
+  "fields": [
+    {
+      "key": "PHOCINAE_ENDPOINT",
+      "label": "斑海豹服务地址",
+      "label_en": "Phocinae Endpoint",
+      "type": "text",
+      "required": true,
+      "defaultValue": "http://127.0.0.1:8155",
+      "placeholder": "http://127.0.0.1:8155",
+      "description": "斑海豹决策服务地址（POST /v1/systemone）。本机默认部署保持默认值即可；私有化部署可改为内网地址。"
+    },
+    {
+      "key": "PHOCINAE_API_KEY",
+      "label": "访问令牌（可选）",
+      "label_en": "Access Token (optional)",
+      "type": "password",
+      "required": false,
+      "placeholder": "斑海豹服务启用鉴权时填写",
+      "description": "如斑海豹服务启用了鉴权，请填写访问令牌；留空表示不鉴权。凭证仅保存在本机。"
+    },
+    {
+      "key": "PHOCINAE_TIMEOUT",
+      "label": "请求超时（秒）",
+      "label_en": "Request Timeout (seconds)",
+      "type": "text",
+      "required": false,
+      "defaultValue": "10",
+      "description": "单次决策请求超时秒数，超时后自动走 fail-closed 降级。"
+    }
+  ]
+}

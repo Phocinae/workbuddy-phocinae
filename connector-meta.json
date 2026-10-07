@@ -1,0 +1,25 @@
+{
+  "name": "斑海豹决策",
+  "name_zh": "斑海豹决策",
+  "name_en": "Phocinae Decision",
+  "description": "本地斑海豹决策模型连接器：为 WorkBuddy 提供文档分类、审批预判、任务路由、质量 gate 四类结构化决策能力，模型服务不可用时 fail-closed 降级。",
+  "description_zh": "本地斑海豹决策模型连接器：为 WorkBuddy 提供文档分类、审批预判、任务路由、质量 gate 四类结构化决策能力，模型服务不可用时 fail-closed 降级。",
+  "description_en": "Local Phocinae decision-model connector providing four structured decision capabilities for WorkBuddy: document classification, approval prediction, task routing, and quality gate, with fail-closed fallback when the model service is unavailable.",
+  "source": "workbuddy-phocinae",
+  "type": "mcp",
+  "version": "0.1.0",
+  "examples_zh": [
+    "把这批发票按类别归档，并给出置信度",
+    "预判这份报销单能否批准，给出风险等级",
+    "判断这个任务该路由给哪个专家执行",
+    "对这份 PPT 做交付前质量检查"
+  ],
+  "examples_en": [
+    "Classify these invoices by category with confidence scores",
+    "Predict whether this expense claim should be approved and its risk level",
+    "Route this task to the right expert for execution",
+    "Run a pre-delivery quality check on this deck"
+  ],
+  "auth_mode": "token",
+  "minWorkbuddyVersion": "4.23.0"
+}
